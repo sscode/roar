@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+    --prim: #000000;
+    color: white;
+    font-size: 18px;
+}
+
+body {
+    background: var(--prim)!important;
+}
+
+.screen {
+    margin: auto;
+    width: 320px;
+    height: 600px;
+}
+
+.start {
+    background: white;
+    padding: 0rem 2rem;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 40px;
+    padding-top: 2rem;
+}
+
+h1.inverted {
+    margin-top: 4rem;
+    color: black;
+}
+
+button {
+    margin-top: 1rem;
+    background: black;
+    border-radius: 48px;
+    padding: 0.25rem 2rem;
+}
+
+button:hover {
+    color: black;
+    background: white;
+    cursor: pointer;
+}
+
+p {
+    font-family: t26-carbon,monospace;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lion {
+    border: 0.1rem solid white;
+    border-radius: 1rem;
+    margin: 2rem 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lion > * {
+    margin: 1rem 0;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.circle {
+    cursor: pointer;
+    height: 7rem;
+    width: 7rem;
+    background: black;
+    border: .1rem solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.circle:hover {
+    background: white;
+}
+.circle:hover p {
+    color: black;
+}
+
+.counting {
+    background: white;
+}
+
+.counting p {
+    color: black;
+}
+
+.notCounting {
+    opacity: 0.5;
+}
+
+.clock {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
