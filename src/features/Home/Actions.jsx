@@ -50,14 +50,14 @@ export default function Actions(){
                 onClick={() => onRest()}
                 className={rest ? "circle counting" : "circle notCounting"}>
                     <p>
-                        REST
+                    {rest ? "RESTING" : "REST"}
                     </p>
                 </span>                               
                 <span 
                 onClick={() => onSprint()}
                 className={sprint ? "circle counting" : "circle notCounting"}>
                     <p>
-                        SPRINTING
+                        {sprint ? "SPRINTING" : "SPRINT"}
                     </p>
                 </span>  
                 < Clock time={time}/>                             

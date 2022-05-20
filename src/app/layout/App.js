@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from "react";
-import Main from "../../features/Home/Main";
+import React from "react";
 import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer } from "react-toastify";
-import { useSelector } from "react-redux";
+// import { ToastContainer } from "react-toastify";
 import Lion from "../../features/Home/Lion";
 
 
