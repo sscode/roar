@@ -10,7 +10,7 @@ export default function Actions(){
 
     const [rest, setRest] = useState(false)
     const [sprint, setSprint] = useState(false)
-    const [interval2, setInterval2] = useState(null)
+
     
     const onRest = () => {
         setTime(0)
