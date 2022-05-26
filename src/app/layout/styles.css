@@ -49,10 +49,14 @@ button:hover {
     cursor: pointer;
 }
 
-p {
-    font-family: t26-carbon,monospace;
-    font-weight: 700;
+p, button, input {
+    font-family: t26-carbon, monospace;
+    font-weight: 400;
     font-style: normal;
+}
+
+.register {
+    border: 0.1rem solid white;
 }
 
 .lion {
@@ -113,4 +117,42 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.modal {
+    position: relative;
+    width: 100%;
+    /* background: red; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+    align-items: center;
+}
+
+.signInputs {
+    width: 70%;
+    overflow: hidden;
+    /* background: blue; */
+}
+
+.signInputs input {
+    color: black;
+    outline: none;
+    max-width: 100%;
+    padding: 0.2rem 1rem;
+    margin: 0.5rem 0rem;
+    border-radius: 48px;
+    border: none;
+}
+
+.signButtons {
+    width: 70%;
+    /* background: yellow; */
+}
+
+.signButtons button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

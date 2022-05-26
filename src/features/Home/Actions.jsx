@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Clock from "./Clock";
 import { startCounter } from "./startActions";
+import { db } from "../../app/config/firebase";
+import { setDoc, doc } from "firebase/firestore"
+
 
 
 export default function Actions(){
@@ -13,6 +16,7 @@ export default function Actions(){
 
     
     const onRest = () => {
+        addDB("rest")
         setTime(0)
         setRest(true);
         setSprint(false)
@@ -20,6 +24,7 @@ export default function Actions(){
     };
     
     const onSprint = () => {
+        addDB("sprint")
         setTime(0)
         setRest(false);
         setSprint(true)
@@ -43,7 +48,17 @@ export default function Actions(){
         }
         return () => clearInterval(interval)
     }, [timer])
-
+    
+    //write to db
+    const user = useSelector(state => state.data.user.user)
+    
+    const addDB = async (type) => {
+        const time = Date.now()
+        const docName = user.uid + "1"
+        // await setDoc(doc(db, "times", user.uid), {start: Date.now()})
+        await setDoc(doc(db, "times", docName), {start: time, end: 0, type: type, user: user.uid})
+    }   
+    
     return(
             <div className="actions">
                 <span 
